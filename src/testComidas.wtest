@@ -1,14 +1,15 @@
+/*Con correcciones */
 import comidas.*
 describe "Test de Comidas" {
 	
-	const h1 = new HamburguesasCarne(peso=1,panUtilizado=panCasero) 
-	const h2 = new HamburguesasVegetarianas(peso=1,panUtilizado=panMasaMadre,tipoLegumbre="garbanzos")
+	const h1 = new HamburguesasCarne(panUtilizado=panCasero) 
+	const h2 = new HamburguesasVegetarianas(panUtilizado=panMasaMadre,tipoLegumbre="garbanzos")
 	const provoleta1 = new Provoleta(peso=1,tieneEspecias=true)
 
 	const asado = new CorteCarne(nombre="asado",calidad=10,peso=250)
 	const entrania = new CorteCarne(nombre="entrania",calidad=7,peso=200)
 	const chorizo = new CorteCarne(nombre="chorizo",calidad=8,peso=50)
-	const parrillada1 = new Parrillada(peso=1,cortes=[asado, entrania, chorizo])
+	const parrillada1 = new Parrillada()
 	
 	
 	method initialize() {

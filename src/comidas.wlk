@@ -1,15 +1,17 @@
+/*Bien
+ */
 class Plato {
-	var property peso
-
+	
+	method peso()
 	method valoracion()	
 	method aptoVegetariano() 
-	method esAbundante() = peso > 250
+	method esAbundante() = self.peso() > 250
 	
 }
 
 class Provoleta inherits Plato{
 	var property tieneEspecias = false
-	
+	const property peso
 	override method aptoVegetariano() = not self.tieneEspecias()
 	override method valoracion() = if(self.esEspecial()){120}else{80}
 	method esEspecial() = self.esAbundante() || self.tieneEspecias()
