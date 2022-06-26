@@ -1,22 +1,23 @@
+/*Con correciones */
 import comidas.*
 import comensales.*
 describe "Test de Comensales" {
 	
 	
 	const provoleta1 = new Provoleta(peso=190,tieneEspecias=true)
-	const h1 = new HamburguesasVegetarianas(peso=250,panUtilizado=panMasaMadre,tipoLegumbre="garbanzos")
-	const vegetariano = new Vegetarianos(peso=68500, comidasIngeridas=[provoleta1,h1])
+	const h1 = new HamburguesasVegetarianas(panUtilizado=panMasaMadre,tipoLegumbre="garbanzos")
+	const vegetariano = new Vegetarianos(peso=68500, comidasIngeridas=[provoleta1,h1, h1])
 
 	const asado = new CorteCarne(nombre="asado",calidad=10,peso=250)
 	const entrania = new CorteCarne(nombre="entraña",calidad=7,peso=200)
 	const chorizo = new CorteCarne(nombre="chorizo",calidad=8,peso=50)
-	const parrillada1 = new Parrillada(peso=1,cortes=[asado, entrania, chorizo])
-	const popular1 = new HambrePopular(peso=85000, comidasIngeridas=[parrillada1])
+	const parrillada1 = new Parrillada(cortes=[asado, entrania, chorizo])
+	const popular1 = new HambrePopular(peso=85000)
 	
-	const h2 = new HamburguesasCarne(peso=1,panUtilizado=panMasaMadre)
+	const h2 = new HamburguesasCarne(panUtilizado=panMasaMadre)
 	const paladarFino = new PaladarFino(comidasIngeridas=[h2],peso=1)
 	
-	const h3 = new HamburguesasCarne(panUtilizado=panCasero,peso=250)
+	const h3 = new HamburguesasCarne(panUtilizado=panCasero)
 	const paladarFino2 = new PaladarFino(comidasIngeridas=[h3],peso=1)
 	
 	method initialize(){
